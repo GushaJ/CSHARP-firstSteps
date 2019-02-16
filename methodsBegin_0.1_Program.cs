@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,15 +20,17 @@ namespace methodsBegin
     
         static void Main(string[] args)
         {
-
             //вызов меню
+                writeMenu();
+            
 
-            Console.WriteLine("Main Menu:\n" +
+            {/*
+                Console.WriteLine("Main Menu:\n" +
                            "1 - option 1;\n" +
                            "2 - option 2;\n" +
                            "3 - option 3;\n" +
                            "0 - exit.");
-
+            */}
             //работа программы
 
             /*
@@ -39,12 +41,9 @@ namespace methodsBegin
              */
 
             //вызов меню
-            Console.WriteLine("Main Menu:\n" +
-                           "1 - option 1;\n" +
-                           "2 - option 2;\n" +
-                           "3 - option 3;\n" +
-                           "0 - exit.");
-
+            
+                writeMenu();
+            
             Console.ReadKey();
         }
     }
