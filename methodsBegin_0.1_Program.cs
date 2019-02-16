@@ -21,28 +21,25 @@ namespace methodsBegin
         static void Main(string[] args)
         {
             //вызов меню
-                writeMenu();
+            writeMenu();
             
 
-            {/*
+            /*
                 Console.WriteLine("Main Menu:\n" +
                            "1 - option 1;\n" +
                            "2 - option 2;\n" +
                            "3 - option 3;\n" +
                            "0 - exit.");
-            */}
+            */
+
             //работа программы
-
             /*
-
  * здесь должен быть код программы 
  * но его нет, потому что пока не важно, что тут будет происходить
- 
              */
 
             //вызов меню
-            
-                writeMenu();
+            writeMenu();
             
             Console.ReadKey();
         }
