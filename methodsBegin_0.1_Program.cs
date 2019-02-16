@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace methodsBegin_0._3_with_param_and_return
+namespace methodsBegin_01
 {
     class Program
     {
