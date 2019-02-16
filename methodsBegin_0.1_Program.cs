@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace methodsBegin_0.1
+namespace methodsBegin_0._3_with_param_and_return
 {
     class Program
     {
-        //(!!!)пример описания метода для вывода в подсказках
+        //пример описания метода для вывода в подсказках
         /// <summary>
         /// Вывод меню на экран с возможностью очистки экрана.
         /// </summary>
         /// <param name="clearScreen">флаг очистки экрана.</param>
         /// <returns>Возвращает номер выбранного пункта меню.</returns>
-        static int MainMenu(bool clearScreen = false)
+        static int MainMenu(bool clearScreen = false)//формальный параметр сlearScreen со значением по умолчанию
         {
             if (clearScreen)
                 Console.Clear();
@@ -23,18 +23,27 @@ namespace methodsBegin_0.1
                             "2 - option 2;\n" +
                             "3 - option 3;\n" +
                             "0 - exit.");
-
-            string userAnswer = Console.ReadLine();
-            int option;
-            if (!int.TryParse(userAnswer, out option))
-            {
-                Console.WriteLine("Wrong data!");
-                Console.ReadKey();
-                return -1;
-                //throw new NotImplementedException();
-            }
-
+            // применение пользовательского метода для ввода числа пользователем с клавиатуры
+            int option = enterUserNum(); 
+            
             return option;
+        }
+        
+        // пользовательский метод для ввода числа пользователем с клавиатуры
+        static int enterUserNum ()
+        {
+            string userAnswer = Console.ReadLine();
+
+            int num;
+            if (!int.TryParse(userAnswer, out num))
+            {
+                Console.WriteLine("Wrong number!");
+                Console.ReadKey();
+                // в случае ошибки ввода пользователем числа
+                // метод возвращает минимально возможное число типа int
+                return int.MinValue;
+            }
+            return num;//возврат числа, которое ввел пользователь
         }
         static void Main(string[] args)
         {
@@ -44,7 +53,7 @@ namespace methodsBegin_0.1
             //работа программы
 
             //вызов меню
-            MainMenu(false);
+            MainMenu();// <=> MainMenu(false); вызов метода без передачи фактического параметра
 
             Console.ReadKey();
         }
