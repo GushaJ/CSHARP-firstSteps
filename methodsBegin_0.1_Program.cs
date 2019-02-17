@@ -22,6 +22,7 @@ namespace methodsBegin_01
                             "1 - option 1;\n" +
                             "2 - option 2;\n" +
                             "3 - option 3;\n" +
+                            "4 - option 4;\n" +
                             "0 - exit.");
             // применение пользовательского метода для ввода числа пользователем с клавиатуры
             int option = enterUserNum(); 
